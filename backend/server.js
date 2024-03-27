@@ -1,6 +1,12 @@
 const express =  require("express");
-
-
+const dotenv = require("dotenv");
 const app = express();
 
-app.listen(5000, ()=> console.log('Server Running on port 5000'));
+const PORT = process.env.PORT || 5000;
+
+app.get("/", (req, res) => {
+    //root route http://localhost:5000/
+    res.send("Hello!!!");
+});
+
+app.listen(PORT, ()=> console.log(`Server Running on port ${PORT}`));
