@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 
-app.use(express.json());
+app.use(express.json()); // to parse the incoming requests with JSON payloads (from req.body)
 
 app.use("/api/auth", authRoutes);
 
