@@ -16,9 +16,11 @@ export const signup = async (req, res) => {
             return res.status(400).json({ error: "Username already exists" });
         }
 
+        // HASH PASSWORD HERE
         const salt = await bcryptjs.genSalt(10);
         const hashedPassword = await bcryptjs.hash(password, salt);
 
+        // https://avatar-placeholder.iran.liara.run/
         const boyProfilePic = 'https://cdn.dribbble.com/users/1709884/screenshots/5070649/scribl_avatar-11_4x.png';
         const girlProfilePic = 'https://falenskij-r43.gosweb.gosuslugi.ru/netcat_files/8/449/zhensk_0.jpg';
         
@@ -31,6 +33,8 @@ export const signup = async (req, res) => {
         });
 
         if (newUser) {
+            // Generate JWT token here
+
             await newUser.save();
 
             res.status(201).json({
