@@ -7,13 +7,13 @@ export const signup = async (req, res) => {
         const { fullName, username, password, confirmPassword, gender } = req.body;
 
         if (password !== confirmPassword) {
-            return res.status(400).json({ error: "Passwords don't match" })
+            return res.status(400).json({ error: "Passwords don't match" });
         }
 
         const user = await User.findOne({ username });
 
         if (user) {
-            return res.status(400).json({ error: "Username already exists" })
+            return res.status(400).json({ error: "Username already exists" });
         }
 
         const salt = await bcryptjs.genSalt(10);
@@ -28,26 +28,26 @@ export const signup = async (req, res) => {
             password: hashedPassword,
             gender,
             profilePic: gender === 'male' ? boyProfilePic : girlProfilePic
-        })
+        });
 
         if (newUser) {
-            await newUser.save()
+            await newUser.save();
 
             res.status(201).json({
                 _id: newUser._id,
                 fullName: newUser.fullName,
                 username: newUser.username,
                 profilePic: newUser.profilePic
-            })
+            });
         }
         else {
-            res.status(400).json({ error: "Invalid user Data" })
+            res.status(400).json({ error: "Invalid user Data" });
         }
 
     }
     catch (error) {
-        console.log(error.message)
-        res.status(500).json({ error: "Internal Server Error" })
+        console.log(error.message);
+        res.status(500).json({ error: "Internal Server Error" });
     }
     //console.log("signupUser");
 }
