@@ -56,7 +56,7 @@ export const signup = async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
     //console.log("signupUser");
-}
+};
 
 export const login = async (req, res) => {
     try {
@@ -85,4 +85,4 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
     console.log("logoutUser");
-}
+};
