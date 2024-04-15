@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "",
     }
+},
+// fields craetedAt, updatedAt mongoose will create, because we have "timestamps: true" => something like "Member since <createdAt>" will be in frontend
+{
+    timestamps: true
 });
 
 const User = mongoose.model("User", userSchema);
