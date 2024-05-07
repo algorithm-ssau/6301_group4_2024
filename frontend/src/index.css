@@ -12,11 +12,9 @@ body{
 
 /*dark mode*/
 ::-webkit-scrollbar{
-  cursor: pointer;
   width: 8px;
 }
 ::-webkit-scrollbar-track{
-  cursor: pointer;
   background: #555;
 }
 ::-webkit-scrollbar-thumb{
