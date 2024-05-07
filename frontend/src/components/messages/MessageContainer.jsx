@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Messages from './Messages';
 
 function MessageContainer() {
   return (
@@ -14,7 +15,7 @@ function MessageContainer() {
         <MessageInput />
         </>
     </div>
-  )
-}
+  );
+};
 
-export default MessageContainer
+export default MessageContainer;
