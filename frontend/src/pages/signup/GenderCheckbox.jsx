@@ -29,7 +29,7 @@ const GenderCheckbox = ({onCheckboxChange,selectedGender}) => {
 export default GenderCheckbox;
 
 
-// STARTER CODE
+// STARTER CODE FOR THIS FILE
 // const GenderCheckbox = () => {
 // 	return (
 // 		<div className='flex'>
