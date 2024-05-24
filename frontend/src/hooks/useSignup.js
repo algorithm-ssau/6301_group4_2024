@@ -32,7 +32,7 @@ const useSignup=()=>{
 
         }
         finally{
-            setLoading(trfalseue);
+            setLoading(false);
         }
     }
     return {loading,signup};
@@ -41,15 +41,15 @@ const useSignup=()=>{
 export default useSignup;
 function handleInputErrors({fullName,username,password,confirmPassword,gender}){
     if(!fullName || !username || !password || !confirmPassword || !gender){
-        toast.error('Please fill in all fields');
+        toast.error('Пожалуйста, заполните все поля');
         return false;
     }
     if( !password !== confirmPassword){
-        toast.error('Password do not match');
+        toast.error('Пароль не совпадает');
         return false;
     }
     if( password.length <6){
-        toast.error('Password must be at least 6 characters');
+        toast.error('Длина пароля должна составлять как минимум 6 символов');
         return false;
     }
     return true;
