@@ -11,7 +11,7 @@ function MessageContainer() {
         <>
         {/*Header*/}
         <div className='bg-stale-500 px-4 py-2 mb-2'>
-            <span className='label-text'>Кому:</span>{" "}
+            {/* <span className='label-text'>Кому:</span>{" "} */}
             <span className='text-gray-900 font-bold'> Имя Фамилия</span>
         </div>
 
