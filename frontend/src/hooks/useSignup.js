@@ -8,7 +8,7 @@ const useSignup=()=>{
     const signup=async({fullName,username,password,confirmPassword,gender})=>{
         const success=handleInputErrors({fullName,username,password,confirmPassword,gender})
         if (!success) return;
-        setLoading(true)
+        setLoading(true);
         try{
             const res=await fetch("/api/auth/signup",{
                 method:"POST",
@@ -17,40 +17,40 @@ const useSignup=()=>{
 
 
 
-            })
-            const data=await res.json()
+            });
+            const data=await res.json();
             if (data.error){
-                throw new Error(data.error)
-            }
-            localStorage.setItem("chat-user",JSON.stringify(data))
-            setauthUser(data)
+                throw new Error(data.error);
+            };
+            localStorage.setItem("chat-user",JSON.stringify(data));
+            setauthUser(data);
 
 
         }
         catch(error){
-            toast.error(error.message)
+            toast.error(error.message);
 
         }
         finally{
-            setLoading(trfalseue)
+            setLoading(trfalseue);
         }
     }
-    return {loading,signup}
+    return {loading,signup};
 
-}
-export default useSignup
+};
+export default useSignup;
 function handleInputErrors({fullName,username,password,confirmPassword,gender}){
     if(!fullName || !username || !password || !confirmPassword || !gender){
         toast.error('Please fill in all fields');
-        return false
+        return false;
     }
     if( !password !== confirmPassword){
         toast.error('Password do not match');
-        return false
+        return false;
     }
     if( password.length <6){
         toast.error('Password must be at least 6 characters');
-        return false
+        return false;
     }
-    return true
-}
+    return true;
+};
