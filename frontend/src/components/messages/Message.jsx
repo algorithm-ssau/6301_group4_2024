@@ -17,6 +17,6 @@ const Message = () => {
         <div className='chat-footer opacity-50 text-xs flex gap-1 items-center'>15:51</div>
     </div>
   )
-}
+};
 
-export default Message
+export default Message;

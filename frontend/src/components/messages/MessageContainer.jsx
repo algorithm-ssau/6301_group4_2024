@@ -36,4 +36,4 @@ const NoChatSelected =() =>{
       </div>
     </div>
   )
-}
+};
