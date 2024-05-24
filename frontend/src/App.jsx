@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { useAuthContext } from './context/AuthContext';
 import Home from './pages/home/Home';
