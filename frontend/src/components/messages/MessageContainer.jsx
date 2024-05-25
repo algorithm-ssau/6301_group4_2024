@@ -5,7 +5,7 @@ import { TiMessages } from "react-icons/ti";
 import useConversation from '../../zustand/useConversation';
 
 function MessageContainer() {
-  const {selectedConversation, setSelectedConversation} = useConversation();
+  const { selectedConversation, setSelectedConversation } = useConversation();
   useEffect(() => {
     // cleanup function (unmounts)
     return () => setSelectedConversation(null);
