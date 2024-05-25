@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {BsSend} from "react-icons/bs";
 const MessageInput = () => {
   return (
@@ -14,7 +14,7 @@ const MessageInput = () => {
             </button> 
         </div>
     </form>
-  )
+  );
 };
 
-export default MessageInput
+export default MessageInput;

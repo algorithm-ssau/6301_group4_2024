@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Message = () => {
   return (
@@ -16,7 +16,7 @@ const Message = () => {
         <div className={`chat-bubble text-white bg-blue-500`}> Привет. Как дела?</div>
         <div className='chat-footer opacity-50 text-xs flex gap-1 items-center'>15:51</div>
     </div>
-  )
+  );
 };
 
 export default Message;
