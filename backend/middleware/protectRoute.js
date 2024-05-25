@@ -18,7 +18,7 @@ const protectRoute = async (req, res, next) => {
         const user = await User.findById(decoded.userId).select("-password");
 
         if (!user) {
-            return res.status(404).json({ error: "User not found" });
+            return res.status(404).json({ error: "Пользователь не найден" });
         }
 
         req.user = user;
@@ -27,7 +27,7 @@ const protectRoute = async (req, res, next) => {
     }
     catch (error) {
         console.log("Error in protectRoute middleware: ", error.message);
-        res.status(500).json({ error: "Internal server error" });
+        res.status(500).json({ error: "Внутренняя ошибка сервера" });
     }
 };
 

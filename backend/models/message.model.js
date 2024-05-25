@@ -16,10 +16,10 @@ const messageSchema = new mongoose.Schema({
         required: true
     }
 },
-// fields craetedAt, updatedAt mongoose will create, because we have "timestamps: true" => something like "message.createdAt : 14:01" will be in frontend
-{
-    timestamps: true
-});
+    // fields craetedAt, updatedAt mongoose will create, because we have "timestamps: true" => something like "message.createdAt : 14:01" will be in frontend
+    {
+        timestamps: true
+    });
 
 const Message = mongoose.model("Message", messageSchema);
 
