@@ -11,13 +11,24 @@ const io = new Server(server, {
 		methods: ["GET", "POST"],
 	},
 });
+
+const userSocketMap = {}; // {userId: socketId}
+
 io.on("connection", (socket) => {
 	console.log("a user connected", socket.id);
+
+    const userId = socket.handshake.query.userId;
+	if (userId != "undefined") userSocketMap[userId] = socket.id;
+
+	// io.emit() используется для отправки событий всем подключенным клиентам
+	io.emit("getOnlineUsers", Object.keys(userSocketMap));
 
 	// socket.on() используется для прослушивания событий (как на стороне клиента, так и на стороне сервера)
 	socket.on("disconnect", () => {
 		console.log("user disconnected", socket.id);
+        delete userSocketMap[userId];
+		io.emit("getOnlineUsers", Object.keys(userSocketMap));
 	});
 });
 
-export {app, io, server}
+export { app, io, server };
