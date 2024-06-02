@@ -4,12 +4,12 @@
 Ознакомиться с тезисами проекта можно по ссылке: https://disk.yandex.ru/d/O_2IfYJjV3Qckg
 ## Над веб-приложением работали:
 ### Backend
-• <a href=https://github.com/AndreyTofan>Тофан Андрей<br>
-• <a href=https://github.com/ReppMikhail>Репп Михаил<br>
+- <a href=https://github.com/AndreyTofan>Тофан Андрей<br>
+- <a href=https://github.com/ReppMikhail>Репп Михаил<br>
 ## Frontend
-• <a href=https://github.com/ArtemStarodubov>Стародубов Артём<br>
-• <a href=https://github.com/alexkvereng>Кверенг Алексей<br>
-• <a href=https://github.com/DVMalkov>Мальков Дмитрий<br>
+- <a href=https://github.com/ArtemStarodubov>Стародубов Артём<br>
+- <a href=https://github.com/alexkvereng>Кверенг Алексей<br>
+- <a href=https://github.com/DVMalkov>Мальков Дмитрий<br>
 ## Использованные технологии:
 • MongoDB
 • Express.js
