@@ -11,13 +11,13 @@
 - <a href=https://github.com/alexkvereng>Кверенг Алексей<br>
 - <a href=https://github.com/DVMalkov>Мальков Дмитрий<br>
 ## Использованные технологии:
-• MongoDB
-• Express.js
-• React
-• Node.js
-• Socket.io и React Context – реализация онлайн статусов пользователей
-• TailwindCSS и Daisy UI – CSS-фреймворк, который позволяет быстро создавать современные веб-сайты, не выходя из HTML-кода
-• JWT – реализация авторизации и регистрации
+• MongoDB <br>
+• Express.js <br>
+• React <br>
+• Node.js <br>
+• Socket.io и React Context – реализация онлайн статусов пользователей <br>
+• TailwindCSS и Daisy UI – CSS-фреймворк, который позволяет быстро создавать современные веб-сайты, не выходя из HTML-кода <br>
+• JWT – реализация авторизации и регистрации <br>
 ## Локальное развертывание:<br>
 1. Клонировать репозиторий: `https://github.com/algorithm-ssau/6301_group4_2024`<br>
 2. Запустить следующую команду в терминале: `npm run build`<br>
