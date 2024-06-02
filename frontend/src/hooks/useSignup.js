@@ -45,7 +45,7 @@ function handleInputErrors({ fullName, username, password, confirmPassword, gend
         toast.error('Пожалуйста, заполните все поля');
         return false;
     }
-    if (!password !== confirmPassword) {
+    if (password !== confirmPassword) {
         toast.error('Пароль не совпадает');
         return false;
     }
