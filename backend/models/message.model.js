@@ -4,17 +4,17 @@ const messageSchema = new mongoose.Schema({
     senderId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        required: true,
     },
-    recieverId: {
+    receiverId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
-        required: true
+        required: true,
     },
     message: {
         type: String,
-        required: true
-    }
+        required: true,
+    },
 },
     // fields craetedAt, updatedAt mongoose will create, because we have "timestamps: true" => something like "message.createdAt : 14:01" will be in frontend
     {

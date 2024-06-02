@@ -5,11 +5,11 @@ import useSignup from "../../hooks/useSignup";
 
 const SignUp = () => {
 	const [inputs, setInputs] = useState({
-		fullName: '',
-		username: '',
-		password: '',
-		confirmPassword: '',
-		gender: ''
+		fullName: "",
+		username: "",
+		password: "",
+		confirmPassword: "",
+		gender: ""
 	});
 	const { loading, signup } = useSignup();
 
@@ -62,7 +62,7 @@ const SignUp = () => {
 
 					<div>
 						<label className='label'>
-							<span className='text-base label-text'>Подтвердите пароль</span>
+							<span className='text-base label-text'>Подтверждение пароля</span>
 						</label>
 						<input type='password' placeholder='Подтвердите пароль' className='w-full input input-bordered h-10'
 							value={inputs.confirmPassword}
@@ -71,14 +71,18 @@ const SignUp = () => {
 
 					<GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender} />
 
-					<Link to={"/login"} className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">
+					<Link
+						to={"/login"}
+						className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'
+						href='#'
+					>
 						Уже есть учётная запись?
 					</Link>
 
 					<div>
 						<button className='btn btn-block btn-sm mt-2 border border-slate-700'
-							disabled={loading}
-						>{loading ? <span className="loading loading-spinner"></span> : "Зарегистрироваться"}</button>
+							disabled={loading}>
+								{loading ? <span className='loading loading-spinner'></span> : "Зарегистрироваться"}</button>
 					</div>
 				</form>
 			</div>
