@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     profilePic: {
         type: String,
         default: "",
-    }
+    },
 },
     // fields craetedAt, updatedAt mongoose will create, because we have "timestamps: true" => something like "Member since <createdAt>" will be in frontend
     {

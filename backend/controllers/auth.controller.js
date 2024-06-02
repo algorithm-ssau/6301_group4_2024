@@ -3,7 +3,6 @@ import User from "../models/user.model.js";
 import generateTokenAndSetCookie from "../utils/generateToken.js";
 
 export const signup = async (req, res) => {
-    //res.send("signupUser");
     try {
         const { fullName, username, password, confirmPassword, gender } = req.body;
 
@@ -30,7 +29,7 @@ export const signup = async (req, res) => {
             username,
             password: hashedPassword,
             gender,
-            profilePic: gender === 'male' ? boyProfilePic : girlProfilePic
+            profilePic: gender === 'male' ? boyProfilePic : girlProfilePic,
         });
 
         if (newUser) {
@@ -43,11 +42,11 @@ export const signup = async (req, res) => {
                 _id: newUser._id,
                 fullName: newUser.fullName,
                 username: newUser.username,
-                profilePic: newUser.profilePic
+                profilePic: newUser.profilePic,
             });
         }
         else {
-            res.status(400).json({ error: "Invalid user Data" });
+            res.status(400).json({ error: "Invalid user data" });
         }
 
     }
@@ -55,7 +54,6 @@ export const signup = async (req, res) => {
         console.log("Error in signup controller", error.message);
         res.status(500).json({ error: "Внутренняя ошибка сервера" });
     }
-    //console.log("signupUser");
 };
 
 export const login = async (req, res) => {

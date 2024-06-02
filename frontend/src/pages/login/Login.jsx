@@ -22,8 +22,8 @@ const Login = () => {
 
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label className="label p-2">
-                            <span className="text-base label-text">Имя пользователя</span>
+                        <label className='label p-2'>
+                            <span className='text-base label-text'>Имя пользователя</span>
                         </label>
                         <input type="text" placeholder="Введите имя пользователя" className="w-full input input-bordered h-10"
                         value={username}
@@ -44,10 +44,8 @@ const Login = () => {
 
                     <div>
 						<button className='btn btn-block btn-sm mt-2'
-                        disabled={loading}
-                        
-                        
-                        >{loading ? <span className="loading loading-spinner"></span>:"Войти"}</button>
+                        disabled={loading}>
+                            {loading ? <span className="loading loading-spinner"></span>:"Войти"}</button>
 					</div>
                     
                 </form>

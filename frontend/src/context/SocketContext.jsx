@@ -23,7 +23,7 @@ export const SocketContextProvider = ({ children }) => {
 
 			setSocket(socket);
 
-			// socket.on() используется для прослушивания событий (как на стороне клиента, так и на стороне сервера)
+			// socket.on()  используется для прослушивания событий (как на стороне клиента, так и на стороне сервера)
 			socket.on("getOnlineUsers", (users) => {
 				setOnlineUsers(users);
 			});
