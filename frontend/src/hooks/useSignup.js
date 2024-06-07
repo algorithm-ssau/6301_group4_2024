@@ -55,6 +55,7 @@ function handleInputErrors({ fullName, username, password, confirmPassword, gend
     }
     if (fullName.length > 30) {
         toast.error('Длина текста, введённого в поле "Имя и фамилия" не должна превышать 30 символов');
+        return false;
         }
     return true;
 }
