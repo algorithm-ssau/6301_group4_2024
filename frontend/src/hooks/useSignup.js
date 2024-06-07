@@ -53,5 +53,8 @@ function handleInputErrors({ fullName, username, password, confirmPassword, gend
         toast.error('Длина пароля должна составлять как минимум 6 символов');
         return false;
     }
+    if (fullName.length > 30) {
+        toast.error('Длина текста, введённого в поле "Имя и фамилия" не должна превышать 30 символов');
+        }
     return true;
 }
